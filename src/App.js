@@ -1,12 +1,11 @@
 import React from 'react';
-import './App.css';
+import './App.scss';
 
 import {
   BrowserRouter as Router,
-  Switch,
-  Route
+  Route,
+  Routes,
 } from "react-router-dom";
-
 
 import Menu from './Menu/Menu';
 import Hero from './Hero/Hero';
@@ -20,18 +19,12 @@ function App() {
     <Router>
       <Menu/>
       <Hero/>
-      <div className= "mainContainer">
-        <Switch>
-          <Route path="/about">
-            <AboutPage />
-          </Route>
-          <Route path="/login">
-            <LoginPage />
-          </Route>
-          <Route path="/">
-            <HomePage/>
-          </Route>
-        </Switch>
+      <div className="mainContainer">
+        <Routes>
+        <Route path="/about" element={<AboutPage />} />
+        <Route path="/login" element={<LoginPage />} />
+        <Route path="/" element={<HomePage />} />
+        </Routes>
       </div>
       <Footer/>
     </Router>

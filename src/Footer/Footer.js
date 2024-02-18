@@ -2,11 +2,9 @@ import React from 'react';
 
 function Footer() {
   return (
-    <div className="bottom">
-            <div className="center">
-                All rights reserved &copy; Shweta
-            </div>
-        </div>
+    <footer className="bottom">
+    <div className="center">All rights reserved &copy; Shweta</div>
+  </footer>
   );
 }
 
